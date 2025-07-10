@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    
+
+        // array is a collection of items
+        // array is a data structure that can hold multiple values
+        let fruits = ["apple", "banana", "cherry", "date"];
+
+        console.log(fruits); // ["apple", "banana", "cherry", "date"]
+        
+        // accessing elements in an array
+        console.log(fruits[0]); // apple
+
+        // adding elements to an array
+        fruits.push("elderberry");
+
+        console.log(fruits); // ["apple", "banana", "cherry", "date", "elderberry"]
+
+        // removing elements from an array
+        fruits.pop();  // removes the last element
+
+        console.log(fruits); // ["apple", "banana", "cherry", "date"]
+
+        // length of an array | total number of elements in the array
+        console.log(fruits.length); // 4
+
+        // last element of an array | total length - 1
+        console.log(fruits.length - 1); // date
+
+        // iterating through an array
+        for (let i = 0; i < fruits.length; i++) {
+            console.log("Fruit at index " + i + ": " + fruits[i]);
+        }
+
+    </script>
+</body>
+</html>
