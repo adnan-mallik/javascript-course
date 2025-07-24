@@ -12,44 +12,50 @@
     
 
         // array is a collection of items
-        // array is a data structure that can hold multiple values
-        let fruits = ["apple", "banana", "cherry", "date"];
+        // array is a data structure that can hold multiple values | []
+        let numbers = [
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+        ];
 
-        console.log(fruits); // ["apple", "banana", "cherry", "date"]
+        // console.log(fruits); // ["apple", "banana", "cherry", "date"]
         
         // accessing elements in an array
-        console.log(fruits[0]); // apple
+        // console.log(fruits[3]); // apple
 
-        // adding elements to an array
-        fruits.push("elderberry");
+        // // adding elements to an array
+        // fruits.push("elderberry");
+        // fruits.unshift("elderberry");
 
-        console.log(fruits); // ["apple", "banana", "cherry", "date", "elderberry"]
+        // fruits.pop();
+        // fruits.shift();
 
-        // removing elements from an array
-        fruits.pop();  // removes the last element
+        console.log(numbers); // ["apple", "banana", "cherry", "date", "elderberry"]
 
-        console.log(fruits); // ["apple", "banana", "cherry", "date"]
+        // // removing elements from an array
+        // fruits.pop();  // removes the last element
 
-        // length of an array | total number of elements in the array
-        console.log(fruits.length); // 4
+        // console.log(fruits); // ["apple", "banana", "cherry", "date"]
 
-        // last element of an array | total length - 1
-        console.log(fruits.length - 1); // date
+        // // length of an array | total number of elements in the array
+        // console.log(fruits.length); // 4
 
-        // iterating through an array
-        for (let i = 0; i < fruits.length; i++) {
-            console.log("Fruit at index " + i + ": " + fruits[i]);
-        }
+        // // last element of an array | total length - 1
+        // console.log(fruits.length - 1); // date
+
+        // // iterating through an array
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log("Fruit at index " + i + ": " + fruits[i]);
+        // }
 
 
-        // unshift | shift
+        // // unshift | shift
 
-        console.log(calculator(5, 10, "+"));
-        console.log(calculator(10, 5, "-"));
-        calculator(5, 10, "*"); // 50
-        calculator(10, 5, "/"); // 2   
-        calculator(10, 5, "%"); // 0
-        calculator(2, 3, "**"); // 8  
+        // console.log(calculator(5, 10, "+"));
+        // console.log(calculator(10, 5, "-"));
+        // calculator(5, 10, "*"); // 50
+        // calculator(10, 5, "/"); // 2   
+        // calculator(10, 5, "%"); // 0
+        // calculator(2, 3, "**"); // 8  
 
         function calculator(a, b, operator) {
             

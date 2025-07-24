@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        // Example object
+        let person = {
+            name: "John",
+            age: 30,
+            isStudent: false,
+            greet: function() {
+                console.log("Hello, my name is " + this.name);
+            }
+        };
+
+        // Accessing object properties
+        // console.log("Name:", person.name);
+        // console.log("Age:", person.age);
+        // console.log("Is Student:", person.isStudent);
+
+        // Calling the greet method
+        // person.greet();
+
+        // Adding a new property
+        person.country = "USA";
+        console.log("Country:", person.country);
+
+        // Modifying an existing property
+        person.age = 31;
+        console.log("Updated Age:", person.age);
+
+    </script>
+</body>
+</html>
