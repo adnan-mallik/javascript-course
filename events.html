@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="num" placeholder="Find Square Root">
+
+    <button id="sqrt">Find Square Root</button>
+
+    <p id="result">this is result</p>
+
+    <script>
+
+
+        const numInputField = document.getElementById('num');
+        const sqrtButton    = document.getElementById('sqrt');
+
+
+        document.getElementById('result').addEventListener('mouseover', () => {
+            document.getElementById('result').style.color = 'red';
+        });
+        document.getElementById('result').addEventListener('mouseout', () => {
+            document.getElementById('result').style.color = 'black';
+        });
+
+        
+
+        sqrtButton.addEventListener('click', () => {
+            const num = parseFloat(numInputField.value);
+            if (isNaN(num)) {
+                alert('Please enter a valid number');
+            } else {
+                const result = Math.sqrt(num);
+                alert(`The square root of ${num} is ${result}`);
+            }
+        });
+
+
+        numInputField.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const num = parseFloat(numInputField.value);
+                if (isNaN(num)) {
+                    document.getElementById('result').textContent = 'Please enter a valid number';
+                    document.getElementById('result').style.color = 'red';
+                } else {
+                    const result = Math.sqrt(num);
+                    document.getElementById('result').textContent = `The square root of ${num} is ${result}`;
+                }
+            }
+        });
+
+
+    </script>
+</body>
+</html>

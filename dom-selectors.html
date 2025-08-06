@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM SELECTORS</title>
+
+    <style>
+        h1{
+            color: #0376a3;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <h1 id="DOM_selector">DOM Selectors</h1>
+    <p>This document provides an overview of various DOM selectors used in web development.</p>
+
+    <h2>Types of Selectors</h2>
+    <ul>
+        <li><strong>Element Selector:</strong> Selects elements by their tag name.</li>
+        <li><strong>Class Selector:</strong> Selects elements by their class attribute.</li>
+        <li><strong>ID Selector:</strong> Selects a single element by its unique ID.</li>
+        <li><strong>Attribute Selector:</strong> Selects elements based on the presence or value of an attribute.</li>
+        <li><strong>Pseudo-class Selector:</strong> Selects elements based on their state or position.</li>
+        <li><strong>Pseudo-element Selector:</strong> Selects a part of an element, such as the first line or first letter.</li>
+    </ul>
+    <h1>Second Heading</h1>
+    <h2>Examples</h2>
+    <pre><code> -->
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Section</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody id="students"></tbody>
+    </table>
+
+    <!-- <div id="test">
+
+    </div> -->
+    <script>
+        
+        const students = [
+            { rollNo: 1, name: 'Alice', class: '10', section: 'A', marks: 85 },
+            { rollNo: 2, name: 'Bob', class: '10', section: 'B', marks: 90 },
+            { rollNo: 3, name: 'Charlie', class: '10', section: 'A', marks: 78 },
+            { rollNo: 4, name: 'David', class: '10', section: 'B', marks: 88 },
+            { rollNo: 5, name: 'Ahsan', class: '10', section: 'B', marks: 95 },
+        ];
+
+        const tbody = document.getElementById('students');
+
+        let rows = '';
+        students.forEach(student => {
+            rows += `
+                <tr>
+                    <td>${student.rollNo}</td>
+                    <td>${student.name}</td>
+                    <td>${student.class}</td>
+                    <td>${student.section}</td>
+                    <td>${student.marks}</td>
+                </tr>
+            `;
+        });
+
+        tbody.innerHTML = rows;
+
+
+
+        // let first_name = "Ali";
+        // let last_name = "Khan";
+
+
+        // let full_name = first_name + ' ' + last_name;
+
+
+        // let students = '<ul>' + 
+        //     '<li>' + first_name + '</li>' +
+        //     '<li>' + last_name + '</li>' + '</ul>'; 
+
+        // let students = `
+        // <ul>
+        //     <li>${first_name}</li>
+        //     <li>${last_name}</li>
+        // </ul>`;
+
+
+        // document.getElementById('test').innerHTML = students;
+    </script>
+</body>
+</html>
