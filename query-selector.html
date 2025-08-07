@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Query Selector Example</h1>
+        <p>This example demonstrates the use of query selectors to manipulate DOM elements.</p>
+
+        <div class="content">
+            <p class="text">This is a paragraph inside the content div.</p>
+            <p class="text">This is another paragraph inside the content div.</p>
+            <p class="text">This is yet another paragraph inside the content div.</p>
+            <p class="text">This is a fourth paragraph inside the content div.</p>
+            <p class="text">This is a fifth paragraph inside the content div.</p>
+            <p class="text">This is a sixth paragraph inside the content div.</p>
+            <p class="text">This is a seventh paragraph inside the content div.</p>
+            <p class="text">This is an eighth paragraph inside the content div.</p>
+            <p class="text">This is a ninth paragraph inside the content div.</p>
+            <p class="text">This is a tenth paragraph inside the content div.</p>
+            <p class="text">This is an eleventh paragraph inside the content div.</p>
+            <p class="text">This is a twelfth paragraph inside the content div.</p>
+        </div>
+
+        <div class="content">this is second content div</div>
+        <button id="addText">Add Text</button>
+        <button id="removeText">Remove Text</button>
+        <button id="toggleText">Toggle Text</button>
+        <button id="changeText">Change Text</button>
+    </div>
+
+
+    <script>
+
+        const text = document.querySelectorAll('.text');
+
+        for (let i = 0; i < text.length; i++) {
+            if(i % 2 === 0) {
+                text[i].style.color = 'red';
+            } else {
+                text[i].style.color = 'green';
+            }
+            text[i].style.fontSize = '16px';
+        }
+
+        const contentDiv = document.querySelector('.content');
+
+        contentDiv.style.backgroundColor = '#0f0f0f';
+        contentDiv.style.padding = '20px';
+    </script>
+</body>
+</html>
