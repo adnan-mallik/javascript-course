@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+    // Arrow functions are a more concise syntax for writing function expressions in JavaScript.
+
+    // They are especially useful for writing short functions and for maintaining the context of 'this'.
+    // Here are some examples:
+
+    // 1. Basic Arrow Function
+    const add = (a, b) => a + b; 
+    console.log(add(2, 3)); // Output: 5
+    
+    // 2. Arrow Function with No Parameters
+    const greet = () => 'Hello, World!';
+    console.log(greet()); // Output: Hello, World!
+
+    // 3. Arrow Function with One Parameter
+    const square = x => x * x;
+
+    console.log(square(4)); // Output: 16
+    // 4. Arrow Function with Multiple Parameters
+    const multiply = (x, y) => x * y;
+    console.log(multiply(3, 5)); // Output: 15
+
+    // 5. Arrow Function with Block Body
+    const sum = (a, b) => {
+        const result = a + b;
+        return result;
+    };
+
+
+    console.log(sum(10, 20)); // Output: 30
+
+    // 6. Arrow Function with 'this' Context
+    const obj = {
+        value: 42,
+        getValue: function() {
+            return () => this.value; // 'this' refers to the obj
+        }
+    };
+    const getValue = obj.getValue();
+    console.log(getValue()); // Output: 42
+
+    // 7. Arrow Function as a Callback
+    const numbers = [1, 2, 3, 4, 5];
+    const doubled = numbers.map(num => num * 2);
+    console.log(doubled); // Output: [2, 4, 6, 8, 10]
+
+
+    // setTimeout with Arrow Function
+    setTimeout(() => {
+        console.log('This is an arrow function in a timeout!');
+    }, 1000 * 5);
+
+    </script>
+</body>
+</html>
