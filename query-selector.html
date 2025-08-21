@@ -39,12 +39,19 @@
         const text = document.querySelectorAll('.text');
 
         for (let i = 0; i < text.length; i++) {
-            if(i % 2 === 0) {
+            
+            if( i % 2 === 0) {
                 text[i].style.color = 'red';
             } else {
-                text[i].style.color = 'green';
+                text[i].style.color = 'blue';
             }
-            text[i].style.fontSize = '16px';
+
+            if(i == 3) {
+                text[i].style.color = 'white';
+                text[i].style.fontSize = '20px';
+                text[i].style.fontWeight = 'bold';
+            }
+
         }
 
         const contentDiv = document.querySelector('.content');

@@ -19,6 +19,7 @@
     // 1. Basic Arrow Function
     const add = (a, b) => a + b; 
     console.log(add(2, 3)); // Output: 5
+
     
     // 2. Arrow Function with No Parameters
     const greet = () => 'Hello, World!';
@@ -28,6 +29,7 @@
     const square = x => x * x;
 
     console.log(square(4)); // Output: 16
+    
     // 4. Arrow Function with Multiple Parameters
     const multiply = (x, y) => x * y;
     console.log(multiply(3, 5)); // Output: 15
@@ -59,8 +61,17 @@
 
     // setTimeout with Arrow Function
     setTimeout(() => {
-        console.log('This is an arrow function in a timeout!');
+        console.warn('This is an arrow function in a timeout!');
     }, 1000 * 5);
+
+    let count = 0;
+    const test_interval = setInterval(() => {
+        console.log(count++)
+        if( count === 5) {
+            clearInterval(test_interval);
+            console.warn('Interval cleared after 5 iterations');
+        }
+    }, 2000)
 
     </script>
 </body>
